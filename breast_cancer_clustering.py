@@ -75,8 +75,8 @@ plt.title('Elbow method')
 plt.xlabel('Cluster')
 plt.ylabel('Sum of squared distances')
 
-#4 clusters
-K_mean = KMeans(n_clusters=4, n_init=10)
+#5 clusters
+K_mean = KMeans(n_clusters=5, n_init=10)
 K_mean.fit(X_clusters)
 
 
@@ -94,14 +94,14 @@ labeledData
 labeledData['labels'].value_counts()
 
 #target in clusters
-for no in range(4):
+for no in range(5):
     print(f'Cluster: {no}')
     print(labeledData[labeledData['labels'] == no]['diagnosis'].value_counts())
 
 
 #add statistics
 cluster_desc = []
-for no in range(4):
+for no in range(5):
     print(f'Cluster: {no}')  
     desc = labeledData[labeledData['labels'] == no].describe()
     cluster_desc.append(desc)
