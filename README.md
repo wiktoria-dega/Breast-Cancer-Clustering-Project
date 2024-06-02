@@ -28,10 +28,10 @@ Malignant Class (labeled 1): 212
 
 
 ## **Results**
-- **Cluster 0:** Mostly benign cases, with relatively lower values for most features, especially radius and texture. This suggests that smaller tumors, with lower texture values (smaller grayscale standard deviation), are more likely to be benign.
-- **Cluster 1:** Also mostly benign, with slightly higher average feature values compared to cluster 0, but still relatively low, especially in terms of tumor radius and texture.
-- **Cluster 2:** Mostly malignant cases, with high mean values for almost all features. Although there are no cases with the highest values of radius and texture, it has the highest values of other features, such as smoothness, compactness, concave points, symmetry or fractal dimension. This also indicates the malignancy of the tumors in this cluster, but their structure may be more irregular and complex than in Cluster 3.
-- **Cluster 3:** Fully malignant cases, also characterized by very high average radius and texture values, suggesting that these features are strongly indicative of malignancy. The tumors in this cluster are the largest and have the most varied texture - indicating the presence of only malignant cases (115) and no benign cases in this cluster.
+- **Cluster 0:** Fully malignant cases, also characterized by very high average radius and texture values, suggesting that these features are strongly indicative of malignancy. The tumors in this cluster are the largest and have the most varied texture - indicating the presence of only malignant cases (115) and no benign cases in this cluster.
+- **Cluster 1:** Mostly malignant cases, with high mean values for almost all features. Although there are no cases with the highest values of radius and texture, it has the highest values of other features, such as smoothness, compactness, concave points, symmetry or fractal dimension. This also indicates the malignancy of the tumors in this cluster, but their structure may be more irregular and complex than in Cluster 3
+- **Cluster 2:** Also mostly benign, with slightly higher average feature values compared to cluster 0, but still relatively low, especially in terms of tumor radius and texture.
+- **Cluster 3:** Mostly benign cases, with relatively lower values for most features, especially radius and texture. This suggests that smaller tumors, with lower texture values (smaller grayscale standard deviation), are more likely to be benign.
 
 ##### In conclusion, larger tumor dimensions and variation in texture are associated with greater malignancy. In addition, changes in the length of the radius, a more compact structure or a greater number of concave points on the tumor contour affect the nature of the tumor. Besides, repeated patterns in tumor irregularity (greater symmetry) and fractal dimension, which determines the complexity and irregularity of the tumor shape, are also important during analysis.
 
