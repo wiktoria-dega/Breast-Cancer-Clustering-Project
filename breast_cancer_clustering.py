@@ -64,7 +64,7 @@ sum_sqr_distances = []
 
 clusters = 20
 for no in range(1, clusters+1):
-    K_mean = KMeans(n_clusters = no, n_init=10)
+    K_mean = KMeans(n_clusters = no, random_state=42, n_init=10)
     K_mean.fit(X_clusters)
     sum_sqr_distances.append(K_mean.inertia_)
     
@@ -76,7 +76,7 @@ plt.xlabel('Cluster')
 plt.ylabel('Sum of squared distances')
 
 #4 clusters
-K_mean = KMeans(n_clusters=4, n_init=10)
+K_mean = KMeans(n_clusters=4, random_state=42, n_init=10)
 K_mean.fit(X_clusters)
 
 
