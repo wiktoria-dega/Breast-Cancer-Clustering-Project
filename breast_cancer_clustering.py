@@ -34,7 +34,7 @@ df = df.drop(columns=['id','radius_se', 'radius_worst', 'texture_se', 'texture_w
                       'symmetry_worst', 'fractal_dimension_se',
                       'fractal_dimension_worst'])
 
-sns.pairplot(df, hue='diagnosis')
+#sns.pairplot(df, hue='diagnosis')
 
 #correlation
 corr = df.corr()
@@ -102,14 +102,14 @@ for no in range(4):
 #add statistics
 cluster_desc = []
 for no in range(4):
-    print(f'Cluster: {no}')
+    print(f'Cluster: {no}')  
     desc = labeledData[labeledData['labels'] == no].describe()
     cluster_desc.append(desc)
     print(desc)
     
 
 #visualization
-cols_ = labeledData.columns[:-2]
+cols_ = labeledData.columns[1:-1]
 
 cols_
 
