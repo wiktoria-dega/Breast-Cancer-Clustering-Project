@@ -46,7 +46,6 @@ df = df.drop(columns=['area_mean', 'perimeter_mean', 'concavity_mean'])
 
 #KMeans clustering
 #reject of the target
-
 X = df.drop(columns=['diagnosis'])
 
 X
@@ -76,15 +75,14 @@ plt.title('Elbow method')
 plt.xlabel('Cluster')
 plt.ylabel('Sum of squared distances')
 
-#8 clusters
-K_mean = KMeans(n_clusters=8)
+#4 clusters
+K_mean = KMeans(n_clusters=4, n_init=10)
 K_mean.fit(X_clusters)
 
 
 #clusters analysis
 labels = pd.DataFrame(K_mean.labels_)
 centroids = pd.DataFrame(K_mean.cluster_centers_)
-
 
 labeledData = pd.concat((df, labels), axis=1)
 labeledData = labeledData.rename({0: 'labels'}, axis=1)
@@ -96,14 +94,14 @@ labeledData
 labeledData['labels'].value_counts()
 
 #target in clusters
-for no in range(8):
+for no in range(4):
     print(f'Cluster: {no}')
     print(labeledData[labeledData['labels'] == no]['diagnosis'].value_counts())
 
 
 #add statistics
 cluster_desc = []
-for no in range(8):
+for no in range(4):
     print(f'Cluster: {no}')
     desc = labeledData[labeledData['labels'] == no].describe()
     cluster_desc.append(desc)
