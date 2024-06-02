@@ -6,7 +6,7 @@ from sklearn.preprocessing import MinMaxScaler
 import os
 os.environ['OMP_NUM_THREADS'] = '3'
 
-#klasteryzacja na całym zestawie
+#clustering on all dataset
 df = pd.read_csv(r'C:\Users\Wiktoria\Desktop\Python Basics\Projekt3_Klasteryzacja\data.csv')
 
 df.shape
@@ -34,7 +34,7 @@ df = df.drop(columns=['id','radius_se', 'radius_worst', 'texture_se', 'texture_w
                       'symmetry_worst', 'fractal_dimension_se',
                       'fractal_dimension_worst'])
 
-#sns.pairplot(df, hue='diagnosis')
+sns.pairplot(df, hue='diagnosis')
 
 #correlation
 corr = df.corr()
@@ -44,8 +44,8 @@ sns.heatmap(corr, annot=True)
 
 df = df.drop(columns=['area_mean', 'perimeter_mean', 'concavity_mean'])
 
-#klasteryzacja KMeans
-#odrzucenie targetu
+#KMeans clustering
+#reject of the target
 
 X = df.drop(columns=['diagnosis'])
 
@@ -53,14 +53,14 @@ X
 
 Y = df['diagnosis']
 
-#skalowanie
+#scaling
 scaler = MinMaxScaler()
 
 X_clusters = scaler.fit_transform(X)
 
 X_clusters
 
-#metoda łokciowa
+#elbow method
 sum_sqr_distances = []
 
 clusters = 20
@@ -76,7 +76,7 @@ plt.title('Elbow method')
 plt.xlabel('Cluster')
 plt.ylabel('Sum of squared distances')
 
-#5 clusters
+#8 clusters
 K_mean = KMeans(n_clusters=8)
 K_mean.fit(X_clusters)
 
@@ -110,7 +110,7 @@ for no in range(8):
     print(desc)
     
 
-#wizualizacja
+#visualization
 cols_ = labeledData.columns[:-2]
 
 cols_
