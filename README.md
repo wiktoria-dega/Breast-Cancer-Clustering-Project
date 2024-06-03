@@ -16,27 +16,27 @@ Total observations of the dataset: 569
 Benign Class (labeled B): 357
 Malignant Class (labeled M): 212
 ![target](images/target.PNG)
-![data](images/correlation.png)
+![data](images/correlation.PNG)
 
 ## **Main steps of the analysis**
 - **Loading, analyze dataset and exclude highly correlated data:** Initial analysis and exclusion of highly correlated data.
 - **Data preprocessing:** Scaling the data to ensure all features contribute equally to the clustering.
 -  **Implementation of KMeans algorithm:**. 
    - **Determining the optimal number of clusters:** Applying the elbow method to select the appropriate number of clusters.
-   ![elbow_method](images/elbow_method.png)
+   ![elbow_method](images/elbow_method.PNG)
    - **Data clustering:** Performing clustering using KMeans algorithm.
 - **Analysis of clusterization results:** Evaluation and interpretation of clusters, including analysis of dominant characteristics in each cluster.
 - **Visualization:** Create charts to show clustering results.
 
 
-![diagnosis_in_each_cluster](images/diagnosis_in_clusters.png)
-![radius](images/radius_mean.png)
-![texture](images/texture_mean.png)
-![smoothness](images/smoothness_mean.png)
-![compactness](images/compactness_mean.png)
-![concave](images/concave_points_mean.png)
-![symmetry](images/symmetry_mean.png)
-![frac_dimension](images/fractal_dimension_mean.png)
+![diagnosis_in_each_cluster](images/diagnosis_in_clusters.PNG)
+![radius](images/radius_mean.PNG)
+![texture](images/texture_mean.PNG)
+![smoothness](images/smoothness_mean.PNG)
+![compactness](images/compactness_mean.PNG)
+![concave](images/concave_points_mean.PNG)
+![symmetry](images/symmetry_mean.PNG)
+![frac_dimension](images/fractal_dimension_mean.PNG)
 
 ## **Results**
 - **Cluster 0:** Mostly benign cases, with relatively lower values for most features, especially radius and texture. This suggests that smaller tumors, with lower texture values (smaller grayscale standard deviation), are more likely to be benign.
