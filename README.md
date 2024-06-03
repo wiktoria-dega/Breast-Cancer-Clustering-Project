@@ -45,7 +45,7 @@ Malignant Class (labeled M): 212
 
 ![diagnosis_in_each_cluster](images/diagnosis_in_clusters.PNG)
 
-##### In conclusion, larger tumor dimensions and variation in texture are associated with greater malignancy. In addition, changes in the length of the radius, a more compact structure or a greater number of concave points on the tumor contour affect the nature of the tumor. Besides, repeated patterns in tumor irregularity (greater symmetry) and fractal dimension, which determines the complexity and irregularity of the tumor shape, are also important during analysis.
+#### In conclusion, larger tumor dimensions and variation in texture are associated with greater malignancy. In addition, changes in the length of the radius, a more compact structure or a greater number of concave points on the tumor contour affect the nature of the tumor. Besides, repeated patterns in tumor irregularity (greater symmetry) and fractal dimension, which determines the complexity and irregularity of the tumor shape, are also important during analysis.
 
 
 ## **Opportunities for further development of the project**
