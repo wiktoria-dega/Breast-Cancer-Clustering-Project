@@ -15,7 +15,7 @@ The dataset is composed as follows:
 Total observations of the dataset: 569
 Benign Class (labeled B): 357
 Malignant Class (labeled M): 212
-![target]([images/target.png](https://github.com/wiktoria-dega/Breast-Cancer-Clustering-Project/blob/main/images/target.PNG))
+![target](images/target.PNG)
 ![data](images/correlation.png)
 
 ## **Main steps of the analysis**
