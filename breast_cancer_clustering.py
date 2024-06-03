@@ -6,7 +6,6 @@ from sklearn.preprocessing import MinMaxScaler
 import os
 os.environ['OMP_NUM_THREADS'] = '3'
 
-#clustering on all dataset
 df = pd.read_csv(r'C:\Users\Wiktoria\Desktop\Python Basics\Projekt3_Klasteryzacja\data.csv')
 
 df.shape
@@ -18,9 +17,18 @@ pd.set_option('display.max_columns', None)
 desc = df.describe()
 desc
 
-
 #target
 df['diagnosis'].value_counts()
+value_counts = df['diagnosis'].value_counts()
+
+colors = ['green', 'salmon']
+
+plt.figure()
+value_counts.plot(kind='bar', color=colors)
+plt.title('Value Counts By Diagnosis')
+plt.xlabel('Diagnosis')
+plt.ylabel('Counts')
+
 df['diagnosis'] = df['diagnosis'].map({'B': 0, 'M': 1})
 
 #high correlations between _mean and _se and _worst values
@@ -93,10 +101,29 @@ labeledData
 #content of clusters
 labeledData['labels'].value_counts()
 
-#target in clusters
+#target in clusters (na odwrót niż w jupyter)
 for no in range(4):
     print(f'Cluster: {no}')
     print(labeledData[labeledData['labels'] == no]['diagnosis'].value_counts())
+
+data_for_plot = []
+
+#collecting data on the number of 'diagnosis' in each cluster
+for no in range(4):
+    cluster_data = labeledData[labeledData['labels'] == no]['diagnosis'].value_counts().reset_index()
+    cluster_data.columns = ['diagnosis', 'count']
+    cluster_data['cluster'] = no
+    data_for_plot.append(cluster_data)
+
+plot_data = pd.concat(data_for_plot)
+
+plt.figure()
+sns.barplot(x='cluster', y='count', hue='diagnosis', data=plot_data, palette='magma')
+plt.title('Count of Diagnosis in Each Cluster')
+plt.xlabel('Cluster')
+plt.ylabel('Count')
+plt.legend(title='Diagnosis')
+plt.show()
 
 
 #add statistics
@@ -122,3 +149,6 @@ for col in cols_:
     plt.title(col + ' ' + param_)
     plt.xlabel('Cluster')
     plt.ylabel('Feature ' + param_)
+
+
+df['diagnosis'].value_counts()
