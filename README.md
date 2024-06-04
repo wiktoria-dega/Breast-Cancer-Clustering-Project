@@ -49,7 +49,7 @@ Malignant Class (labeled M): 212
 
 
 ## **Opportunities for further development of the project**
-- **Integration with other datasets:** You can consider combining your results with other medical databases to get a broader picture of different types of breast cancer and their characteristics.
+- **Integration with other datasets:** It's possible to combine results with other medical databases to get a broader picture of different types of breast cancer and their characteristics.
 - **Personalization of therapy:** Using clustering results to develop personalized treatment plans based on characteristics prevalent in each cluster.
 - **Predictive analytics:** Development of predictive models that can predict disease development based on cluster data.
 - **Use of other clustering algorithms e.g. DBSCAN**.
